@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
+@theme {
+  --color-midnight: #101116;
+  --color-midnight-surface: #202631;
+  --color-midnight-card: #202631;
+  --color-midnight-border: #343A49;
+  --color-midnight-hover: #29303D;
+  --color-slate-surface: #202631;
+  --color-slate-surface-raised: #28303E;
+  --color-structural-border: #343A49;
+  --color-structural-border-subtle: #2A303D;
+  --color-cyan: #43E5D2;
+  --color-cyan-hover: #35D6C3;
+  --color-cyan-muted: rgba(67, 229, 210, 0.12);
+  --color-acid: #43E5D2;
+  --color-acid-hover: #35D6C3;
+  --color-acid-muted: rgba(67, 229, 210, 0.12);
+  --color-violet: #8B7CFF;
+  --color-violet-muted: rgba(139, 124, 255, 0.14);
+  --color-coral: #FF896D;
+  --color-coral-muted: rgba(255, 137, 109, 0.14);
+  --color-paper: #F3F0E8;
+  --color-paper-light: #FAF8F2;
+  --color-paper-surface: #FFFFFF;
+  --color-paper-border: #E0DDD3;
+  --color-ink: #101116;
+  --color-ink-muted: #9EA8B6;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #101116;
+  --foreground: #F3F0E8;
+  --surface: #202631;
+  --surface-raised: #28303E;
+  --border-subtle: #343A49;
+  --border-strong: #475063;
+  --cyan: #43E5D2;
+  --acid: #43E5D2;
+  --violet: #8B7CFF;
+  --coral: #FF896D;
+  --paper: #F3F0E8;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #101116;
+  color: #F3F0E8;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sharp, futuristic festival scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #101116;
+}
+::-webkit-scrollbar-thumb {
+  background: #343A49;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #43E5D2;
+}
+
+::selection {
+  background-color: #43E5D2;
+  color: #101116;
 }
